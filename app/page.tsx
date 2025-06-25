@@ -92,22 +92,22 @@ export default function Home() {
     },
     'Cinematic': {
       type: 'cinematic image',
-      terms: 'cinematic lighting, movie still quality, film grain, anamorphic lens flare, cinematography.com, afi.com, criterion.com',
+      terms: 'cinematic lighting, movie still quality, film grain, anamorphic lens flare',
       negative: '--no amateur lighting, poor color grading, low quality, blurry, distorted'
     },
     'Editorial Photography': {
       type: 'editorial image',
-      terms: 'editorial photography, magazine quality, professional retouching, micro contrast, natural lighting, everyday luxury, macro detail, skin perfection',
+      terms: 'editorial photography, magazine quality, professional retouching, micro contrast, vogue style, high fashion, studio lighting, natural lighting, everyday luxury, beauty retouching, macro detail, skin perfection',
       negative: '--no amateur quality, poor composition, low resolution, blurry, distorted'
     },
     'Documentary': {
       type: 'documentary image',
-      terms: 'stills archive, nationalgeographic.com, reuters.com, gettyimages.com, magnumphotos.com, worldpressphoto.org',
+      terms: 'stills archive',
       negative: '--no staged, artificial, overly processed, blurry, distorted'
     },
     'Professional Portrait': {
       type: 'portrait image',
-      terms: 'stills archive,harcourt.com',
+      terms: 'stills archive',
       negative: '--no unflattering angle, harsh shadows, distorted features, blurry'
     },
     'Fashion Photography': {
@@ -117,12 +117,12 @@ export default function Home() {
     },
     'Street Photography': {
       type: 'street photography image',
-      terms: 'candid moment, urban photography, photojournalism, decisive moment, street culture,magnumphotos.com',
+      terms: 'candid moment, urban photography, photojournalism, decisive moment, street culture',
       negative: '--no staged, artificial, studio lighting, blurry, distorted'
     },
     'Commercial Photography': {
       type: 'commercial image',
-      terms: 'advertising quality, brand photography, product placement, commercial appeal, marketing ready, behance.net, adsoftheworld.com',
+      terms: 'advertising quality, brand photography, product placement, commercial appeal, marketing ready',
       negative: '--no amateur quality, poor lighting, unprofessional, blurry, distorted'
     }
   }
