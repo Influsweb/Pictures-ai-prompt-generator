@@ -496,7 +496,7 @@ export default function Home() {
               ) : (
                 <div className="text-center text-gray-500">
                   <div className="text-4xl mb-4">📝</div>
-                  <p>Fill out the form and click "Generate Prompt" to create your AI image prompt</p>
+                  <p>Fill out the form and click &quot;Generate Prompt&quot; to create your AI image prompt</p>
                 </div>
               )}
             </div>
