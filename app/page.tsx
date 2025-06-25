@@ -71,7 +71,7 @@ export default function Home() {
     'Fujinon XF 35mm f/1.4 R'
   ]
 
-  const getFileExtension = (camera) => {
+  const getFileExtension = (camera: string) => {
     if (camera.includes('Sony')) return 'RWL'
     if (camera.includes('Leica')) return 'RAW'
     if (camera.includes('Nikon')) return 'NEF'
@@ -133,7 +133,7 @@ export default function Home() {
       return
     }
 
-    const config = styleConfig[style]
+    const config = styleConfig[style as keyof typeof styleConfig]
     let prompt = `Generate a ${config.type} of ${subject}`
     
     if (environment) {
