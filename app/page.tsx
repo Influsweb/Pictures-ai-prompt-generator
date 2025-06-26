@@ -22,11 +22,12 @@ export default function Home() {
   const cameras = [
     'None (Auto)',
     'Leica M11',
-    'Sony A7RV', 
-    'Sony A1 II',
-    'Nikon Z8',
     'Canon EOS R5',
-    'Fujifilm GFX 100S II'
+    'Sony A7RV', 
+    'Nikon Z8',
+    'Hasselblad X2D 100C',
+    'Fujifilm GFX 100S II',
+    'Pentax K-3 Mark III'
   ]
 
   const lenses = [
@@ -34,41 +35,38 @@ export default function Home() {
     '--- Leica Lenses ---',
     'Leica Summilux-M 50mm f/1.4 ASPH',
     'Leica APO-Summicron-M 35mm f/2 ASPH',
-    'Leica Elmarit-M 28mm f/2.8 ASPH',
-    'Leica Super-Elmar-M 21mm f/3.4 ASPH',
-    'Leica APO-Summicron-SL 90mm f/2 ASPH',
-    'Leica Vario-Elmarit-SL 24-70mm f/2.8 ASPH',
     'Leica Noctilux 50mm f/0.95',
+    'Leica Summilux-M 35mm f/1.4 ASPH',
+    'Leica APO-Summicron-SL 90mm f/2 ASPH',
     '--- Sony Lenses ---',
+    'Sony FE 85mm f/1.8',
+    'Sony FE 50mm f/1.8',
     'Sony FE 24-70mm f/2.8 GM II',
-    'Sony FE 50mm f/1.4 GM',
-    'Sony FE 70-200mm f/2.8 GM OSS II',
     'Sony FE 135mm f/1.8 GM',
-    'Sony FE 12-24mm f/2.8 GM',
-    'Sony FE 90mm f/2.8 Macro G OSS',
+    'Sony FE 70-200mm f/2.8 GM OSS II',
     '--- Nikon Lenses ---',
+    'Nikon AF-S 50mm f/1.8G',
+    'Nikon AF-S 85mm f/1.8G',
     'Nikon Z 24-70mm f/2.8 S',
-    'Nikon Z 70-200mm f/2.8 VR S',
+    'Nikon AF-S 70-200mm f/2.8E FL ED VR',
     'Nikon Z 85mm f/1.2 S',
-    'Nikon Z 14-24mm f/2.8 S',
-    'Nikon Z 600mm f/4 TC VR S',
-    'Nikon Z 28-75mm f/2.8',
     '--- Canon Lenses ---',
-    'Canon RF 50mm f/1.2L USM',
-    'Canon RF 24-70mm f/2.8L IS USM',
-    'Canon RF 70-200mm f/2.8L IS USM',
-    'Canon RF 85mm f/1.2L USM',
-    'Canon RF 15-35mm f/2.8L IS USM',
     'Canon EF 50mm f/1.8 STM',
-    'Canon EF 70-300mm f/4-5.6 IS II USM',
+    'Canon EF 85mm f/1.8 USM',
+    'Canon EF 24-70mm f/2.8L II USM',
+    'Canon EF 50mm f/1.2L USM',
+    'Canon EF 70-200mm f/2.8L IS III USM',
     '--- Fujifilm Lenses ---',
+    'Fujinon XF 35mm f/1.4 R',
+    'Fujinon XF 56mm f/1.2 R',
     'Fujinon XF 16-55mm f/2.8 R LM WR',
-    'Fujinon XF 90mm f/2 R LM WR',
-    'Fujinon XF 8-16mm f/2.8 R LM WR',
-    'Fujinon XF 56mm f/1.2 R WR',
-    'Fujinon XF 50-140mm f/2.8 R LM OIS WR',
-    'Fujinon XF 16-80mm f/4 R OIS WR',
-    'Fujinon XF 35mm f/1.4 R'
+    'Fujinon GF 63mm f/2.8 R WR',
+    '--- Hasselblad Lenses ---',
+    'XCD 80mm f/1.9',
+    'XCD 45mm f/4 P',
+    '--- Pentax Lenses ---',
+    'SMC Pentax-FA 43mm f/1.9 Limited',
+    'HD Pentax-D FA 85mm f/1.4'
   ]
 
   const getFileExtension = (camera: string) => {
@@ -77,6 +75,8 @@ export default function Home() {
     if (camera.includes('Nikon')) return 'NEF'
     if (camera.includes('Canon')) return 'CR3'
     if (camera.includes('Fujifilm')) return 'RAF'
+    if (camera.includes('Pentax')) return 'PEF'
+    if (camera.includes('Hasselblad')) return '3FR'
     return 'JPG'
   }
 
@@ -92,37 +92,37 @@ export default function Home() {
     },
     'Cinematic': {
       type: 'cinematic image',
-      terms: 'cinematic lighting, movie still quality, film grain, anamorphic lens flare',
+      terms: 'cinematic lighting, movie still quality, film grain, anamorphic lens flare, cinematography.com, afi.com, criterion.com',
       negative: '--no amateur lighting, poor color grading, low quality, blurry, distorted'
     },
     'Editorial Photography': {
       type: 'editorial image',
-      terms: 'editorial photography, magazine quality, professional retouching, micro contrast, vogue style, high fashion, studio lighting, natural lighting, everyday luxury, beauty retouching, macro detail, skin perfection',
+      terms: 'editorial photography, magazine quality, professional retouching, micro contrast, natural lighting, everyday luxury, beauty retouching, macro detail, skin perfection',
       negative: '--no amateur quality, poor composition, low resolution, blurry, distorted'
     },
     'Documentary': {
       type: 'documentary image',
-      terms: 'stills archive',
+      terms: 'stills archive, nationalgeographic.com, reuters.com, gettyimages.com, magnumphotos.com, worldpressphoto.org',
       negative: '--no staged, artificial, overly processed, blurry, distorted'
     },
     'Professional Portrait': {
       type: 'portrait image',
-      terms: 'stills archive',
+      terms: 'stills archive, studio-harcourt.com',
       negative: '--no unflattering angle, harsh shadows, distorted features, blurry'
     },
     'Fashion Photography': {
       type: 'fashion image',
-      terms: 'fashion editorial, vogue style, high fashion, studio lighting, beauty retouching, fashion week quality',
+      terms: 'fashion editorial, vogue style, high fashion, studio lighting, beauty retouching, fashion week quality, vogue.com, harpersbazaar.com, elle.com',
       negative: '--no amateur lighting, poor makeup, unfashionable, blurry, distorted'
     },
     'Street Photography': {
       type: 'street photography image',
-      terms: 'candid moment, urban photography, photojournalism, decisive moment, street culture',
+      terms: 'candid moment, urban photography, photojournalism, decisive moment, street culture, magnumphotos.com',
       negative: '--no staged, artificial, studio lighting, blurry, distorted'
     },
     'Commercial Photography': {
       type: 'commercial image',
-      terms: 'advertising quality, brand photography, product placement, commercial appeal, marketing ready',
+      terms: 'advertising quality, brand photography, product placement, commercial appeal, marketing ready, behance.net, adsoftheworld.com',
       negative: '--no amateur quality, poor lighting, unprofessional, blurry, distorted'
     }
   }
